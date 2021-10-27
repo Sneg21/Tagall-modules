@@ -39,7 +39,7 @@ class TagAllMod(loader.Module):
         except Exception as e:
             loop = asyncio.get_running_loop()
         chunkss = [i for i in chunkss]
-        chunkss = chunks(chunks, 10)
+        chunkss = chunks(chunkss, 10)
 
         for i in chunkss:
             loop.create_task(self.test(message, i))
